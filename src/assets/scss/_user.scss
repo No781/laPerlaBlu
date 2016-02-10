@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+$main-dark: #2C3E50;
+$main: #2980B9;
+$main-light: #3498DB;
+$second: #E74C3C;
+$bg-dark: #1E1E20;
+$bg-light: #ECF0F1;
+
+
+
+.top-bar {
+  position: fixed;
+  top:0;
+  width: 100%;
+  .logo {
+    background: $main;
+    color: $main-dark;
+    text-transform: uppercase;
+  }
+}
+.hero {
+  margin-top:100px;
+}
+.about {
+  background: $bg-dark;
+  color: $bg-light;
+}
