@@ -8,16 +8,44 @@ $second: #E74C3C;
 $bg-dark: #1E1E20;
 $bg-light: #ECF0F1;
 
+$main-padding: 50px;
 
+p, h2, h4, h5 {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h3, .item_price {
+  font-family: 'Old Standard TT', serif;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+hr {
+  border-bottom: 1px dashed;
+}
+
+.small-collapse {
+  padding: 0 15px;
+}
 
 .top-bar {
   position: fixed;
   top:0;
-  width: 100%;
+  padding: 0;
+  background: rgba($bg-light, 0.5);
   .logo {
-    background: $main;
     color: $main-dark;
     text-transform: uppercase;
+    .circle {
+      width: 100px;
+      height: 100px;
+      background: $main;
+      border-radius: 100%;
+    }
+    h1 {
+    }
   }
 }
 .hero {
@@ -26,4 +54,55 @@ $bg-light: #ECF0F1;
 .about {
   background: $bg-dark;
   color: $bg-light;
+  padding: $main-padding $main-padding*3;
+}
+
+.menu {
+  .menu_wrap {
+    display: flex;
+    align-items: stretch;
+    .menu_image {
+      background-image: url("https://static.pexels.com/photos/5707/restaurant-people-lamps-vintage.jpg");
+      background-size: cover;
+      width: 50%;
+    }
+    .menu_list {
+      padding: $main-padding !important;
+      background: $bg-light;
+      width: 50%;
+    }
+  }
+}
+
+.map {
+  height: 400px;
+}
+
+.footer {
+  background: $bg-dark;
+  color: $bg-light;
+  padding: $main-padding $main-padding*1.5;
+  h5 {
+    border-bottom: 1px dashed rgba($bg-light,0.4);
+    padding-bottom: 10px;
+    width: 50%;
+  }
+  label {
+    color: $bg-light;
+  }
+  .button {
+    width: 100%;
+  }
+  .social .row {
+    width: 70%;
+    padding: 0;
+    svg {
+      fill: $bg-light;
+      transition: all 1s easy-ease;
+      &:hover {
+        fill: $main;
+        transition: all 1s easy-ease;
+      }
+    }
+  }
 }
