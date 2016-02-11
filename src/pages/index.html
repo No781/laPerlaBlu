@@ -1,11 +1,11 @@
 <div class="row small-collapse" id="main">
   <section class="hero">
-    <img src="https://static.pexels.com/photos/7765/food.jpg" alt="">
+    <img src="{{root}}/assets/img/hero.png" alt="">
   </section>
   <section class="about text-center small-collapse">
     <h3>WELCOME</h3>
-    <p>The Bistro <strong>La Perla Blu</strong> in Basel offers something to satisfy ever hunger. We treat you in our rustic locale with Pizze, Pasti and a sortiment of specialities from Sicily.</p><br>
-    <button type="button" class="secondary hollow button">About us</button>
+    <p>The Bistro <strong>La Perla Blu</strong> in Basel offers something to satisfy every hunger. We treat you in our rustic locale with Pizze, Pasti and a sortiment of specialities from Sicily.</p><br>
+    <button type="button" class="hollow button">About us</button>
     <hr>
     <h5>Opening Hours</h5>
     <p>Sunday to Tuesday - 09:00 - 24:00 Friday to Saturday- 08:00 - 03:00</p>
@@ -51,12 +51,12 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="thumbs">
     <div class="row small-up-2 medium-up-4 small-collapse">
-      <div class="column"><img class=""  src="https://static.pexels.com/photos/6458/city-restaurant-lunch-outside.jpg" alt=""></div>
-      <div class="column"><img class=""  src="https://static.pexels.com/photos/4939/bread-food-plate-toast.jpg" alt=""></div>
-      <div class="column"><img class=""  src="https://static.pexels.com/photos/5877/red-couple-night-romantic.jpg" alt=""></div>
-      <div class="column"><img class=""  src="https://static.pexels.com/photos/6067/coffee-flower-reading-magazine.jpg" alt=""></div>
+      <div class="column"><img class=""  src="{{root}}/assets/img/outside-thumb.png" alt=""></div>
+      <div class="column"><img class=""  src="{{root}}/assets/img/toast-thumb.png" alt=""></div>
+      <div class="column"><img class=""  src="{{root}}/assets/img/wine-thumb.png" alt=""></div>
+      <div class="column"><img class=""  src="{{root}}/assets/img/coffee-thumb.png" alt=""></div>
     </div>
   </section>
   <section class="map">
@@ -103,7 +103,7 @@
         </div>
       </div>
       <div class="small-12 medium-4 columns">
-        <h5>Get in Contact</h5>
+        <h5>Get in Touch</h5>
         <form action="" data-abide novalidate>
           <div data-abide-error class="alert callout" style="display: none;">
             <p><i class="fi-alert"></i> There are some errors in your form.</p>
@@ -111,7 +111,7 @@
           <div class="row">
             <div class="small-12 columns">
               <label>Your E-Mail Address
-                <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required pattern="number">
+                <input type="text" placeholder="example@mail.com" aria-describedby="exampleHelpText" required pattern="email">
                 <span class="form-error">
                   Yo, you had better fill this out, it's required.
                 </span>
