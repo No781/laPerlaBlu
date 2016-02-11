@@ -1,12 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic,400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 $main-dark: #2C3E50;
 $main: #2980B9;
 $main-light: #3498DB;
 $second: #E74C3C;
 $bg-dark: #1E1E20;
-$bg-light: #ECF0F1;
+$bg-light: #F1EEEC;
 $gradient: linear-gradient(135deg, #3498db 1%,#2c3e50 100%);
 
 
@@ -22,6 +22,11 @@ h1, h3, .item_price {
 
 h3 {
   font-size: 3rem;
+  padding-bottom: 20px;
+}
+
+p {
+  letter-spacing: 1.1px;
 }
 
 hr {
@@ -38,6 +43,7 @@ hr {
   padding: 0;
   width: 100%;
   background: white;
+  z-index: 9000;
   .logo {
     color: $main-dark;
     text-transform: uppercase;
@@ -66,7 +72,7 @@ hr {
   }
 }
 
-.about {
+.about-modal {
   background: white;
   .row {
     margin: 10% auto 0 auto;
@@ -86,6 +92,7 @@ hr {
   .close-button {
     color: $main;
     font-size: 5rem;
+    margin-top: 50px;
   }
 }
 .hero {
@@ -130,11 +137,51 @@ hr {
   }
 }
 
-.map {
-  height: 500px;
-  z-index: -2;
+.about {
+  background: $bg-dark;
+  color: $bg-light;
+  padding: $main-padding $main-padding*3;
+  strong {
+    color: $main;
+  }
 }
 
+.thumbs {
+  .column {
+    position: relative;
+    img {
+      filter: grayscale(80%);
+      transition: all 0.7s ease;
+    }
+    .overlay {
+      background: rgba($main,0.4);
+      position: absolute;
+      top: 0;
+      left:0;
+      height: 100%;
+      width:100%;
+      transition: all 0.7s ease;
+    }
+    &:hover {
+      cursor: pointer;
+      img {
+        filter: grayscale(0%);
+      }
+      .overlay {
+        background: rgba($main, 0);
+      }
+    }
+  }
+}
+
+.map {
+  height: 500px;
+}
+.owl-carousel .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .footer {
   background: $bg-dark;
   color: $bg-light;
@@ -150,6 +197,10 @@ hr {
   .button {
     width: 100%;
     background: $main;
+    transition: all 0.7s ease;
+    &:hover {
+      background: darken($main, 10);
+    }
   }
   .social .row {
     width: 70%;
