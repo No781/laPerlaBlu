@@ -44,26 +44,30 @@ hr {
   width: 100%;
   background: white;
   z-index: 9000;
+  .row {
+    width:79rem;
+    max-width: 85rem;
+  }
   .logo {
     color: $main-dark;
     text-transform: uppercase;
-    margin-left: 11%;
     .circle {
       position: absolute;
-      min-width: 50px;
-      min-height: 50px;
-      background: $main;
+      width: 100px;
+      height: 100px;
+      background-image: url("../img/perlablue.png");
+      background-size: contain;
       border-radius: 100%;
       margin-top: 10px;
     }
     h1 {
-      padding-left: 60px;
+      padding-left: 120px;
+      padding-top: 10px;
       font-weight: 400italic;
       text-transform: capitalize;
     }
   }
   .title-bar-right {
-    margin-right: 11%;
     padding: 15px 0;
     color: rgba($bg-dark, 0.5);
     p {
@@ -97,11 +101,6 @@ hr {
 }
 .hero {
   margin-top:100px;
-  display: flex;
-  img{
-    object-fit: cover;
-    width: 100%;
-  }
 }
 .intro {
   background: $bg-dark;
@@ -109,6 +108,9 @@ hr {
   padding: $main-padding $main-padding*3;
   .button {
     color: $main;
+  }
+  .just_text {
+    text-align: justify;
   }
 }
 
@@ -141,6 +143,9 @@ hr {
   background: $bg-dark;
   color: $bg-light;
   padding: $main-padding $main-padding*3;
+  p {
+    text-align: justify;
+  }
   strong {
     color: $main;
   }
@@ -177,10 +182,12 @@ hr {
 .map {
   height: 500px;
 }
-.owl-carousel .item img{
-  display: block;
-  width: 100%;
-  height: auto;
+.slider-img {
+  display: flex;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
 }
 .footer {
   background: $bg-dark;
@@ -190,6 +197,7 @@ hr {
     border-bottom: 1px dashed rgba($bg-light,0.4);
     padding-bottom: 10px;
     width: 50%;
+    margin: 0 auto 20px auto;
   }
   label {
     color: $bg-light;
@@ -203,7 +211,8 @@ hr {
     }
   }
   .social .row {
-    width: 70%;
+    width: 50%;
+    margin: 0 auto;
     padding: 0;
     svg {
       fill: $bg-light;
