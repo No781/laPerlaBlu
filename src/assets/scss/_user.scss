@@ -7,6 +7,8 @@ $main-light: #3498DB;
 $second: #E74C3C;
 $bg-dark: #1E1E20;
 $bg-light: #ECF0F1;
+$gradient: linear-gradient(135deg, #3498db 1%,#2c3e50 100%);
+
 
 $main-padding: 50px;
 
@@ -34,12 +36,12 @@ hr {
   position: fixed;
   top:0;
   padding: 0;
-  margin-left: 11%;
   width: 100%;
   background: white;
   .logo {
     color: $main-dark;
     text-transform: uppercase;
+    margin-left: 11%;
     .circle {
       position: absolute;
       min-width: 50px;
@@ -54,6 +56,37 @@ hr {
       text-transform: capitalize;
     }
   }
+  .title-bar-right {
+    margin-right: 11%;
+    padding: 15px 0;
+    color: rgba($bg-dark, 0.5);
+    p {
+      margin:0;
+    }
+  }
+}
+
+.about {
+  background: white;
+  .row {
+    margin: 10% auto 0 auto;
+    .about_img {
+      img {
+        width: 100%;
+        padding-top: 20px;
+      }
+    }
+    strong {
+      color: $main;
+    }
+    br {
+      margin-bottom: 20px;
+    }
+  }
+  .close-button {
+    color: $main;
+    font-size: 5rem;
+  }
 }
 .hero {
   margin-top:100px;
@@ -63,7 +96,7 @@ hr {
     width: 100%;
   }
 }
-.about {
+.intro {
   background: $bg-dark;
   color: $bg-light;
   padding: $main-padding $main-padding*3;
@@ -98,7 +131,8 @@ hr {
 }
 
 .map {
-  height: 400px;
+  height: 500px;
+  z-index: -2;
 }
 
 .footer {
